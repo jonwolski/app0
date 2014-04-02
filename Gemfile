@@ -44,4 +44,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'brakeman'
+gem 'brakeman', '~> 2.4.3'
