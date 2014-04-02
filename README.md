@@ -14,5 +14,14 @@ I then modified the app by generating a `Post` resource and by adding the `brake
 
 At this point, I can run `bundle exec brakeman` and see the expected output with a security warning and no errors.
 
+## Making it break
+I modified routes.rb generate a brakeman error.
+```ruby
+App0::Application.routes.draw do
+  res = 'posts'
+  resources res.to_s, controller: 'posts'
+end
+```
 
-
+This now generates the output
+> Sexp#value called on multi-item Sexp While processing routes.rb

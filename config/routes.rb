@@ -1,3 +1,4 @@
 App0::Application.routes.draw do
-  resources :posts
+  res = 'posts'
+  resources res.to_s, controller: 'posts'
 end
